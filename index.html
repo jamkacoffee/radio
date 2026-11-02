@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pastel IP Radio</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+  <style>
+    :root {
+      --pink: #ffdce5;
+      --purple: #e7ddff;
+      --blue: #d9f1ff;
+      --mint: #d9f6e8;
+      --text: #4f4a61;
+      --soft-text: #777187;
+      --white: rgba(255, 255, 255, 0.82);
+      --shadow: 0 10px 30px rgba(109, 93, 134, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: "Sarabun", "Tahoma", sans-serif;
+      background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 34px 0 50px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+    }
+
+    .subtitle {
+      margin: 6px 0 0;
+      color: var(--soft-text);
+    }
+
+    button {
+      border: 0;
+      border-radius: 14px;
+      padding: 11px 16px;
+      cursor: pointer;
+      color: var(--text);
+      font-weight: 700;
+      background: var(--white);
+      box-shadow: 0 5px 15px rgba(109, 93, 134, 0.1);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      background: #ffffff;
+    }
+
+    .player {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 18px;
+      align-items: center;
+      padding: 20px;
+      margin-bottom: 28px;
+      border-radius: 24px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .station-logo,
+    .logo-placeholder {
+      width: 92px;
+      height: 92px;
+      border-radius: 20px;
+      object-fit: cover;
+      background: var(--mint);
+    }
+
+    .logo-placeholder {
+      display: grid;
+      place-items: center;
+      font-size: 2.2rem;
+    }
+
+    .now-playing {
+      margin: 0 0 4px;
+      color: var(--soft-text);
+      font-size: 0.9rem;
+    }
+
+    #stationName {
+      margin: 0 0 14px;
+      font-size: 1.2rem;
+    }
+
+    audio {
+      width: 100%;
+      accent-color: #bf9eea;
+    }
+
+    .status {
+      min-height: 24px;
+      margin: 0 0 18px;
+      color: var(--soft-text);
+      text-align: center;
+    }
+
+    .groups {
+      display: grid;
+      gap: 25px;
+    }
+
+    .group-title {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+    }
+
+    .station-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .station-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      padding: 12px;
+      border: 2px solid transparent;
+      border-radius: 18px;
+      text-align: left;
+      background: var(--white);
+    }
+
+    .station-card.active {
+      border-color: #c7a9ee;
+      background: #fffaff;
+    }
+
+    .station-card img,
+    .card-placeholder {
+      width: 52px;
+      height: 52px;
+      flex: 0 0 52px;
+      border-radius: 14px;
+      object-fit: cover;
+      background: var(--mint);
+    }
+
+    .card-placeholder {
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+    }
+
+    .station-card strong,
+    .station-card small {
+      display: block;
+    }
+
+    .station-card strong {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .station-card small {
+      margin-top: 4px;
+      color: var(--soft-text);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .player {
+        grid-template-columns: 70px 1fr;
+      }
+
+      .station-logo,
+      .logo-placeholder {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <div>
+        <h1>🎵 Pastel IP Radio</h1>
+        <p class="subtitle">เลือกสถานีโปรด แล้วฟังวิทยุออนไลน์ได้ทันที</p>
+      </div>
+      <button id="reloadButton" type="button">↻ โหลดรายการใหม่</button>
+    </header>
+
+    <section class="player">
+      <div id="playerLogo" class="logo-placeholder">📻</div>
+
+      <div>
+        <p class="now-playing">กำลังเล่น</p>
+        <h2 id="stationName">ยังไม่ได้เลือกสถานี</h2>
+        <audio id="audioPlayer" controls preload="none"></audio>
+      </div>
+    </section>
+
+    <p id="status" class="status">กำลังโหลดรายการสถานี...</p>
+    <section id="groups" class="groups"></section>
+  </main>
+
+  <script>
+    const playlistFile = "ipradio.m3u";
+    const audioPlayer = document.getElementById("audioPlayer");
+    const groupsElement = document.getElementById("groups");
+    const stationNameElement = document.getElementById("stationName");
+    const playerLogoElement = document.getElementById("playerLogo");
+    const statusElement = document.getElementById("status");
+    const reloadButton = document.getElementById("reloadButton");
+
+    let stations = [];
+    let hls = null;
+
+    function getAttribute(line, name) {
+      const result = line.match(new RegExp(`${name}="([^"]*)"`, "i"));
+      return result ? result[1] : "";
+    }
+
+    function parseM3U(content) {
+      const lines = content
+        .replace(/\r/g, "")
+        .split("\n")
+        .map(line => line.trim())
+        .filter(Boolean);
+
+      const items = [];
+
+      for (let index = 0; index < lines.length; index++) {
+        if (!lines[index].startsWith("#EXTINF:")) continue;
+
+        const info = lines[index];
+        let url = "";
+
+        for (let next = index + 1; next < lines.length; next++) {
+          if (!lines[next].startsWith("#")) {
+            url = lines[next];
+            break;
+          }
+        }
+
+        if (!url) continue;
+
+        const commaPosition = info.lastIndexOf(",");
+        const name = commaPosition >= 0
+          ? info.slice(commaPosition + 1).trim()
+          : "ไม่ระบุชื่อสถานี";
+
+        items.push({
+          name,
+          url,
+          logo: getAttribute(info, "tvg-logo"),
+          group: getAttribute(info, "group-title") || "สถานีอื่น ๆ"
+        });
+      }
+
+      return items;
+    }
+
+    function createLogo(url, className = "") {
+      if (!url) {
+        const placeholder = document.createElement("div");
+        placeholder.className = `card-placeholder ${className}`;
+        placeholder.textContent = "📻";
+        return placeholder;
+      }
+
+      const image = document.createElement("img");
+      image.src = url;
+      image.alt = "โลโก้สถานี";
+      image.loading = "lazy";
+      image.onerror = () => {
+        image.replaceWith(createLogo("", className));
+      };
+      return image;
+    }
+
+    function setPlayerLogo(url) {
+      playerLogoElement.innerHTML = "";
+
+      if (!url) {
+        playerLogoElement.className = "logo-placeholder";
+        playerLogoElement.textContent = "📻";
+        return;
+      }
+
+      const image = document.createElement("img");
+      image.className = "station-logo";
+      image.src = url;
+      image.alt = "โลโก้สถานี";
+      image.onerror = () => {
+        playerLogoElement.className = "logo-placeholder";
+        playerLogoElement.textContent = "📻";
+      };
+
+      playerLogoElement.className = "";
+      playerLogoElement.appendChild(image);
+    }
+
+    function playStation(station, button) {
+      document.querySelectorAll(".station-card").forEach(card => {
+        card.classList.remove("active");
+      });
+
+      if (button) button.classList.add("active");
+
+      stationNameElement.textContent = station.name;
+      setPlayerLogo(station.logo);
+      statusElement.textContent = `กำลังเชื่อมต่อ: ${station.name}`;
+
+      if (hls) {
+        hls.destroy();
+        hls = null;
+      }
+
+      audioPlayer.pause();
+      audioPlayer.removeAttribute("src");
+      audioPlayer.load();
+
+      const isHls = station.url.toLowerCase().includes(".m3u8");
+
+      if (isHls && window.Hls && Hls.isSupported()) {
+        hls = new Hls();
+        hls.loadSource(station.url);
+        hls.attachMedia(audioPlayer);
+
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          audioPlayer.play().catch(() => {});
+        });
+
+        hls.on(Hls.Events.ERROR, (_, data) => {
+          if (data.fatal) {
+            statusElement.textContent = "ไม่สามารถเล่นสตรีมนี้ได้";
+          }
+        });
+      } else {
+        audioPlayer.src = station.url;
+        audioPlayer.play().catch(() => {});
+      }
+    }
+
+    function renderStations() {
+      groupsElement.innerHTML = "";
+
+      const groupedStations = stations.reduce((groups, station) => {
+        if (!groups[station.group]) groups[station.group] = [];
+        groups[station.group].push(station);
+        return groups;
+      }, {});
+
+      Object.entries(groupedStations).forEach(([groupName, groupStations]) => {
+        const section = document.createElement("section");
+        const title = document.createElement("h2");
+        const grid = document.createElement("div");
+
+        title.className = "group-title";
+        title.textContent = groupName;
+        grid.className = "station-grid";
+
+        groupStations.forEach(station => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "station-card";
+
+          const logo = createLogo(station.logo);
+          const text = document.createElement("div");
+          const name = document.createElement("strong");
+          const category = document.createElement("small");
+
+          name.textContent = station.name;
+          category.textContent = station.group;
+
+          text.append(name, category);
+          button.append(logo, text);
+
+          button.addEventListener("click", () => playStation(station, button));
+          grid.appendChild(button);
+        });
+
+        section.append(title, grid);
+        groupsElement.appendChild(section);
+      });
+    }
+
+    async function loadPlaylist() {
+      statusElement.textContent = "กำลังโหลดรายการสถานี...";
+      groupsElement.innerHTML = "";
+
+      try {
+        const response = await fetch(`${playlistFile}?v=${Date.now()}`, {
+          cache: "no-store"
+        });
+
+        if (!response.ok) {
+          throw new Error("ไม่พบไฟล์ ipradio.m3u");
+        }
+
+        const content = await response.text();
+        stations = parseM3U(content);
+
+        if (!stations.length) {
+          throw new Error("ไม่พบสถานีในไฟล์ ipradio.m3u");
+        }
+
+        renderStations();
+        statusElement.textContent = `พบทั้งหมด ${stations.length} สถานี`;
+      } catch (error) {
+        console.error(error);
+        statusElement.textContent =
+          "โหลดรายการไม่ได้ กรุณาตรวจสอบว่าไฟล์ ipradio.m3u อยู่ในโฟลเดอร์เดียวกับ index.html";
+      }
+    }
+
+    audioPlayer.addEventListener("playing", () => {
+      statusElement.textContent = `กำลังเล่น: ${stationNameElement.textContent}`;
+    });
+
+    audioPlayer.addEventListener("error", () => {
+      statusElement.textContent =
+        "เล่นสตรีมไม่ได้ อาจเกิดจากลิงก์หมดอายุ, CORS หรือเบราว์เซอร์บล็อก HTTP";
+    });
+
+    reloadButton.addEventListener("click", loadPlaylist);
+    loadPlaylist();
+  </script>
+</body>
+</html>

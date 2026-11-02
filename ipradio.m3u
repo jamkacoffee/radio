@@ -1,0 +1,176 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="hmn.th" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/9KHL0.jpg" group-title="Eduteanment",Home Media Network
+http://chanthai.trueddns.com:35603/hls/hmn.m3u8
+
+#EXTINF:-1,Greenwave  tvg-logo="https://s2.imgbb.ws/file/storage-sv2/WkHWI.jpg" group-title=" Atime Radio", Greenwave
+https://atimeonline2.smartclick.co.th/green
+#EXTINF:-1,EFM  tvg-logo="https://s1.imgbb.ws/file/storage-sv1/Wkb9L.jpg" group-title=" Atime Radio", EFM
+https://atimeonline2.smartclick.co.th/efm
+#EXTINF:-1,Hotwave tvg-logo="https://s2.imgbb.ws/file/storage-sv2/WkIth.png" group-title=" Atime Radio", Hotwave
+https://atimeonline2.smartclick.co.th/hotwave
+
+#EXTINF:-1,FM tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio", Fm radio
+https://radio12.plathong.net/9999/;stream.mp3
+#EXTINF:-1, Radio tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio",  Radio
+https://securestreams4.autopo.st:1787/;stream.mp3/;stream.mp3
+#EXTINF:-1,DSI Radio tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio", DSI Radio
+https://radio11.plathong.net/8896
+#EXTINF:-1,FM Eingdoi Radio tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio", Eingdoi Radio radio
+https://radio1.ohmi-design.com/8170/;
+#EXTINF:-1,Fung Fung Fung Radio tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio", Fung Fung Fung Radio
+https://plus.onair.network:8170/my
+#EXTINF:-1,City Life FM Radio tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio", City Life FM Radio
+https://radio14.plathong.net/8076/;stream.mp3
+#EXTINF:-1,buengkan radio tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio", buengkan radio 
+https://c16.radioboss.fm:8332/stream
+#EXTINF:-1,90 Rakthai radio tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio", 90 Rakthai radio 
+https://radio11.plathong.net/8896/;
+#EXTINF:-1,Bkk FM 88.5 tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio", Voice Of Navy FM 88.5 Radio
+https://radio12.plathong.net/7346/;stream.mp3
+#EXTINF:-1,Bkk FM91 tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio",  FM91 Radio
+https://www.fm91bkk.com:8900/;stream.mp3
+#EXTINF:-1,Xansiam tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio",  Xansiam Radio
+https://radio12.plathong.net/8480/live
+
+
+
+#EXTINF:-1,Bkk FM tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio",  FM Radio
+https://plus.onair.network:8170/my
+#EXTINF:-1,Bkk FM89 tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio",  FM89 Radio
+https://media.onair.one:8030/fm89
+#EXTINF:-1,Bkk FM tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio",  FM Radio
+https://radio10.plathong.net/7008/;stream.mp3
+#EXTINF:-1,Bkk Capitol FM tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio",  Capitol FM Radio
+https://securestreams4.autopo.st:1787/;stream.mp3/;stream.mp3
+#EXTINF:-1,Bkk FM tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio",  Bangkok FM Radio
+https://rsas.bkk.fm/bangkok
+
+
+#EXTINF:-1,KCS Radio FM 89.0 ภูเก็ต FM tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title="Phuket Th Radio",  KCS Radio FM 89.0 ภูเก็ต
+https://radio.servradio.com/9432/;
+#EXTINF:-1,Phuket Live Radio 89.5 FM tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title="Phuket Th Radio",  Phuket Live Radio 89.5 FM
+https://radio9.plathong.net/8020/;stream.mp3
+#EXTINF:-1,Radio Red Phuket 91.5 FM tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title="Phuket Th Radio",  Radio Red Phuket 91.5 FM
+https://stream.chiliradio.app/radiored
+#EXTINF:-1,สวท.ภูเก็ต FM 96.75 MHz tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title="Phuket Th Radio",  สวท.ภูเก็ต FM 96.75 MHz กรมประชาสัมพันธ์
+https://radio-org-01-ott.prd.go.th/pkt_fm96_75
+#EXTINF:-1,AM1062KHz สวท.ภูเก็ต tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title="Phuket Th Radio",  AM1062KHz สวท.ภูเก็ต
+https://radio-org-01-ott.prd.go.th/pkt_am1062
+
+
+
+
+#EXTINF:-1,Chorsaard  tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio",  Chorsaard FM Radio
+https://radio12.plathong.net/9999/;stream.mp3
+#EXTINF:-1,Bkk FM tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Th Radio",  FM Radio
+https://radio10.plathong.net/7008/;stream.mp3
+
+#EXTINF:-1,Great 93 Fm tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title="Chiang Mai Th Radio",  Great 93
+https://radio.vpsthai.net/proxy/chydhnxz/stream
+#EXTINF:-1,ChiliRADIO Pop Fm tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title="Chiang Mai Th Radio", ChiliRADIO Pop
+https://stream.chiliradio.app/chilipop
+#EXTINF:-1,Chiang Mai Radio FM 93.75 tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title="Chiang Mai Th Radio", Chiang Mai Radio FM 93.75
+https://80.hostpleng.com/api.php?url=http://112.121.151.133:8124/live
+
+#EXTINF:-1,Digital Radio Pai tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Phrae Th Radio",  Digital Radio Pai
+https://radio11.plathong.net/8840
+#EXTINF:-1,Top Viewpoint Radio 93.75 tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Phrae Th Radio",  Top Viewpoint Radio 93.75
+https://radio9.plathong.net/7146/;stream.mp3
+
+
+
+#EXTINF:-1,surf 102.5 tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title="Hua Hin Th Radio",  surf 102.5 Radio
+https://stream.surf.radio/surf1025
+#EXTINF:-1,เพลงลูกทุ่ง Hua Hin Music dRadio tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title="Hua Hin Th Radio",  เพลงลูกทุ่ง Hua Hin Music dRadio
+https://radio10.plathong.net/7008/;stream.mp3
+
+
+#EXTINF:-1,Radio Station FM 88 tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Ratchaburi Th Radio", Radio Station FM 88.0
+https://pakeefm.org:8080/stream/701102/
+#EXTINF:-1,Radio Station FM 106.75 tvg-logo="https://s2.imgbb.ws/file/storage-sv2/10LAr.png" group-title=" Ratchaburi Th Radio", Radio Station FM 106.75
+https://pakeefm.org/stream/701101/;stream.mp3
+
+
+#EXTINF:-1,101 Smooth Jazz tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1vkBY.jpg" group-title=" USA Radio",  101 Smooth Jazz Los Angeles CA
+https://ais-sa2.cdnstream1.com/2329_128.mp3
+#EXTINF:-1,KUSC Classical FM 91.5 tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1cIeh.jpg" group-title=" USA Radio", KUSC Classical FM 91.5 Los Angeles CA
+https://15053.live.streamtheworld.com/KUSCAAC96.aac
+#EXTINF:-1,The SoCal Sound 88.5 FM tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1cIeh.jpg" group-title=" USA Radio",The SoCal Sound 88.5 FM Los Angeles CA
+https://17653.live.streamtheworld.com/KCSNFMAAC.aac
+#EXTINF:-1,Indie X FM tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1cIeh.jpg" group-title=" USA Radio",Indie X FM Los Angeles CA
+https://kathy.torontocast.com:2695/stream
+#EXTINF:-1,KXLU FM 88.9  tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1cIeh.jpg" group-title=" USA Radio",KXLU FM 88.9 Los Angeles CA
+https://kxlu.streamguys1.com/kxlu-hi
+#EXTINF:-1,KIIS FM 102.7 tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1cIeh.jpg" group-title=" USA Radio",KIIS FM 102.7Los Angeles CA
+https://cloud.revma.ihrhls.com/zc185?rj-org=n0db-e2&rj-ttl=5&rj-tok=AAABoZC1Si4AVMyBGv2i6knpqg
+#EXTINF:-1,Folk Music tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1cIeh.jpg" group-title=" USA Radio", Folk Music Bergenfield NJ USA
+https://s3.radio.co/s0b5d4adb5/listen
+#EXTINF:-1,Smooth Jazz 24/7 New York  tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1cIeh.jpg" group-title=" USA Radio", Smooth Jazz 24/7 New York NY
+https://ais-edge89-dal02.cdnstream.com/2124_128.mp3
+#EXTINF:-1,Pacific Coast FM tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1cIeh.jpg" group-title=" USA Radio", Pacific Coast FM Las Vegas NV
+https://usa10.fastcast4u.com:9310/stream
+#EXTINF:-1,Jazz24 tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1cIeh.jpg" group-title=" USA Radio", Jazz24 Seattle WA
+https://knkx-live-a.edge.audiocdn.com/6285_128k?aw_0_1st.playerid=radioGarden
+#EXTINF:-1,Kiss FM 99.9-KJKS tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1cIeh.jpg" group-title=" USA Radio", Kiss FM 99.9-KJKS Kahului HI USA
+https://pacificmedia.cdnstream1.com/2797_64.aac
+#EXTINF:-1,KPBS FM 89.5 tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1cIeh.jpg" group-title=" USA Radio", KPBS FM 89.5 San Diego CA USA
+https://kpbs.streamguys1.com/kpbs.mp3
+
+
+
+
+#EXTINF:-1,Classic FM tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1vRrS.jpg" group-title=" UK Radio",  Classic FM  London UK
+https://media-ice.musicradio.com/ClassicFMMP3
+#EXTINF:-1,Gold FM tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1vRrS.jpg" group-title=" UK Radio",  Gold FM  London UK
+https://media-ssl.musicradio.com/Gold
+#EXTINF:-1,Heart 106.2 FM tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1vRrS.jpg" group-title=" UK Radio",  Heart 106.2 FM  London UK
+https://ice-sov.musicradio.com/HeartLondonMP3
+#EXTINF:-1,24/7 London Radio tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1vRrS.jpg" group-title=" UK Radio", 24/7 London Radio UK
+https://ec3.yesstreaming.net:3645/stream
+#EXTINF:-1,London Romanian Radio tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1vRrS.jpg" group-title=" UK Radio", London Romanian Radio  UK
+https://play.lrradio.uk/
+
+#EXTINF:-1,Big B Radio-Kpop tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1v7pX.jpg" group-title="South Korea Radio", Big B Radio-Kpop FM
+https://antares.dribbcast.com/proxy/kpop?mp=/s
+#EXTINF:-1,WBS FM 89.7 tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1v7pX.jpg" group-title="South Korea Radio",  WBS FM 89.7 FM Radio
+https://wbsradio.kr/wbs-seoul
+#EXTINF:-1,Yahweh Radio tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1v7pX.jpg" group-title="South Korea Radio",  Yahweh Radio FM Radio
+https://s3.radio.co/s22189b87c/listen
+#EXTINF:-1,WBS 부산원음방송 104.9 tvg-logo="https://s1.imgbb.ws/file/storage-sv1/1v7pX.jpg" group-title="South Korea Radio",  WBS 부산원음방송 104.9 FM Busan, South Korea
+https://wbsradio2.kr/wbs-b
+
+
+#EXTINF:-1,Bkk FM tvg-logo="https://s2.imgbb.ws/file/storage-sv2/1cN4R.jpg" group-title=" Th Radio",  FM Radio
+https://radio10.plathong.net/7008/;stream.mp3
+
+
+
+#EXTINF:-1,Australian Country Radio tvg-logo="https://s2.imgbb.ws/file/storage-sv2/1cN4R.jpg" group-title="Australia Radio", Australian Country Radio Sydney Au
+https://streaming.radio.co/s5ea3fdd1c/listen
+#EXTINF:-1,Totally Radio 60's tvg-logo="https://s2.imgbb.ws/file/storage-sv2/1cN4R.jpg" group-title="Australia Radio", Totally Radio 60's Sydney Au
+https://28863.live.streamtheworld.com/T_RAD_60S_S01AAC.aac
+#EXTINF:-1,Totally Radio 70's tvg-logo="https://s2.imgbb.ws/file/storage-sv2/1cN4R.jpg" group-title="Australia Radio", Totally Radio 70's Sydney Au
+https://28793.live.streamtheworld.com/T_RAD_70S_S01AAC.aac
+#EXTINF:-1,Totally Radio 80's tvg-logo="https://s2.imgbb.ws/file/storage-sv2/1cN4R.jpg" group-title="Australia Radio", Totally Radio 80's Sydney Au
+https://23093.live.streamtheworld.com/T_RAD_80S_S01AAC.aac
+#EXTINF:-1,Totally Radio 90's tvg-logo="https://s2.imgbb.ws/file/storage-sv2/1cN4R.jpg" group-title="Australia Radio", Totally Radio 90's Sydney Au
+https://28803.live.streamtheworld.com/T_RAD_90S_S01AAC.aac
+#EXTINF:-1,Totally Radio 00's tvg-logo="https://s2.imgbb.ws/file/storage-sv2/1cN4R.jpg" group-title="Australia Radio", Totally Radio 00's Sydney Au
+https://28803.live.streamtheworld.com/T_RAD_00S_S01AAC.aac
+#EXTINF:-1,Totally Radio Easy tvg-logo="https://s2.imgbb.ws/file/storage-sv2/1cN4R.jpg" group-title="Australia Radio", Totally Radio Easy Sydney Au
+https://28863.live.streamtheworld.com/T_RAD_EASY_S01AAC.aac
+#EXTINF:-1,Totally Radio Poptvg-logo="https://s2.imgbb.ws/file/storage-sv2/1cN4R.jpg" group-title="Australia Radio", Totally Radio Pop Sydney Au
+https://23093.live.streamtheworld.com/T_RAD_POP_S01AAC.aac
+#EXTINF:-1,Totally Radio Hits tvg-logo="https://s2.imgbb.ws/file/storage-sv2/1cN4R.jpg" group-title="Australia Radio", Totally Radio Hits Sydney Au
+https://23163.live.streamtheworld.com/T_RAD_HITS_S01AAC.aac
+#EXTINF:-1,Smooth FM 95.3 tvg-logo="https://s2.imgbb.ws/file/storage-sv2/1cN4R.jpg" group-title="Australia Radio", Smooth FM 95.3 Sydney Au
+https://28803.live.streamtheworld.com/SMOOTH953_AAC48.aac
+
+
+
+#EXTINF:-1,News Radio  tvg-logo="https://s2.imgbb.ws/file/storage-sv2/1zvT9.jpg" group-title="News Radio", Totally Radio 70's Sydney Au
+https://28793.live.streamtheworld.com/T_RAD_70S_S01AAC.aac
+
+#EXTINF:-1,N2GB 873 AM  tvg-logo="https://s2.imgbb.ws/file/storage-sv2/1zvvW.jpg" group-title="News Radio", 2GB 873 AM Sydney Au
+https://23153.live.streamtheworld.com/2GB.mp3
+
